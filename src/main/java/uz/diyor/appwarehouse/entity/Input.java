@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.security.Timestamp;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -17,7 +18,7 @@ public class Input {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Timestamp date;
+    private LocalDate date;
 
     @ManyToOne
     private Warehouse warehouse;

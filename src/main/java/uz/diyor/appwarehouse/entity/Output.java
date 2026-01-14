@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -24,9 +25,6 @@ public class Output {
 
 
     @ManyToOne
-    private Client client;
-
-    @ManyToOne
     private Currency currency;
 
     private String factureNumber;
@@ -35,4 +33,7 @@ public class Output {
     private String code;
 
 
+    public void setDate(LocalDateTime now) {
+
+    }
 }

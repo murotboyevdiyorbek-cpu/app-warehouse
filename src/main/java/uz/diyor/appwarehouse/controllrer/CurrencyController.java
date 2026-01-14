@@ -17,7 +17,7 @@ public class CurrencyController {
     final CurrencyService currencyService;
 
     @PostMapping
-    public Result addCurrency(Currency currency) {
+    public Result addCurrency(@RequestBody Currency currency) {
         return currencyService.addCurrency(currency);
     }
 
